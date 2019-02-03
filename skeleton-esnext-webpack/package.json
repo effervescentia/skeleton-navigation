@@ -36,7 +36,9 @@
     "server:dev:hmr": "npm run server:dev -- --hot",
     "server:prod": "http-server dist --cors",
     "webpack": "cross-env BABEL_ENV=node ./node_modules/.bin/webpack",
-    "webpack-dev-server": "cross-env BABEL_ENV=node ./node_modules/.bin/webpack-dev-server"
+    "webpack-dev-server": "cross-env BABEL_ENV=node ./node_modules/.bin/webpack-dev-server",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -87,7 +89,8 @@
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "isomorphic-fetch": "^2.2.1",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "snyk": "^1.124.0"
   },
   "devDependencies": {
     "@easy-webpack/config-aurelia": "^2.2.2",
@@ -132,5 +135,6 @@
     "wait-on": "^2.0.1",
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.12"
-  }
+  },
+  "snyk": true
 }
